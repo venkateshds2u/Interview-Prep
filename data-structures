@@ -1,0 +1,174 @@
+Data Structures
+
+
+
+1. HashMap
+
+    Initialization:
+    HashMap<Key, Value> map = new HashMap<>();
+
+    Operations:
+        map.put(key, value) → Inserts/updates a key-value pair.
+        map.get(key) → Retrieves the value associated with the key.
+        map.containsKey(key) → Checks if a key exists.
+        map.containsValue(value) → Checks if a value exists.
+        map.remove(key) → Removes the key-value pair.
+        map.isEmpty() → Checks if the map is empty.
+        map.size() → Returns the number of key-value pairs.
+        map.keySet() → Returns a set of all keys.
+        map.values() → Returns a collection of all values.
+        map.entrySet() → Returns a set of all key-value pairs.
+
+2. ArrayList
+
+    Initialization:
+    ArrayList<Type> list = new ArrayList<>();
+
+    Operations:
+        list.add(value) → Adds an element to the list.
+        list.add(index, value) → Inserts an element at a specific index.
+        list.get(index) → Retrieves the element at the specified index.
+        list.set(index, value) → Replaces the element at the specified index.
+        list.remove(index) → Removes the element at the specified index.
+        list.remove(value) → Removes the first occurrence of the specified element.
+        list.isEmpty() → Checks if the list is empty.
+        list.size() → Returns the number of elements in the list.
+        list.contains(value) → Checks if the list contains the specified value.
+        list.clear() → Removes all elements from the list.
+
+3. LinkedList
+
+    Initialization:
+    LinkedList<Type> list = new LinkedList<>();
+
+    Operations:
+        list.add(value) → Adds an element to the end of the list.
+        list.addFirst(value) → Adds an element to the beginning of the list.
+        list.addLast(value) → Adds an element to the end of the list (same as add()).
+        list.get(index) → Retrieves the element at the specified index.
+        list.getFirst() → Retrieves the first element.
+        list.getLast() → Retrieves the last element.
+        list.remove(index) → Removes the element at the specified index.
+        list.removeFirst() → Removes the first element.
+        list.removeLast() → Removes the last element.
+        list.isEmpty() → Checks if the list is empty.
+        list.size() → Returns the number of elements.
+        list.contains(value) → Checks if the list contains the specified value.
+
+4. Stack
+
+    Initialization:
+    Stack<Type> stack = new Stack<>();
+
+    Operations:
+        stack.push(value) → Pushes an element onto the top of the stack.
+        stack.pop() → Removes and returns the top element of the stack.
+        stack.peek() → Returns the top element without removing it.
+        stack.isEmpty() → Checks if the stack is empty.
+        stack.size() → Returns the number of elements in the stack.
+        stack.search(value) → Returns the 1-based position of the value from the top of the stack.
+
+5. Queue (LinkedList as Queue)
+
+    Initialization:
+    Queue<Type> queue = new LinkedList<>();
+
+    Operations:
+        queue.add(value) → Inserts an element into the queue (throws exception if failed).
+        queue.offer(value) → Inserts an element into the queue (returns false if failed).
+        queue.poll() → Retrieves and removes the head of the queue.
+        queue.remove() → Removes the head of the queue.
+        queue.peek() → Retrieves, but does not remove, the head of the queue.
+        queue.isEmpty() → Checks if the queue is empty.
+        queue.size() → Returns the number of elements in the queue.
+
+6. PriorityQueue
+
+    Initialization:
+    PriorityQueue<Type> pq = new PriorityQueue<>();
+
+    Operations:
+        pq.add(value) → Inserts an element into the queue.
+        pq.offer(value) → Inserts an element into the queue (alternative to add()).
+        pq.poll() → Retrieves and removes the head (smallest element).
+        pq.remove() → Removes the head of the queue.
+        pq.peek() → Retrieves the head without removing it.
+        pq.isEmpty() → Checks if the queue is empty.
+        pq.size() → Returns the number of elements in the queue.
+
+7. HashSet
+
+    Initialization:
+    HashSet<Type> set = new HashSet<>();
+
+    Operations:
+        set.add(value) → Adds an element to the set.
+        set.remove(value) → Removes the specified element from the set.
+        set.contains(value) → Checks if the set contains the specified element.
+        set.isEmpty() → Checks if the set is empty.
+        set.size() → Returns the number of elements in the set.
+        set.clear() → Removes all elements from the set.
+        set.iterator() → Returns an iterator for the set.
+
+8. TreeSet
+
+    Initialization:
+    TreeSet<Type> set = new TreeSet<>();
+
+    Operations:
+        set.add(value) → Adds an element to the set (sorted order).
+        set.remove(value) → Removes the specified element.
+        set.contains(value) → Checks if the set contains the element.
+        set.first() → Retrieves the first (smallest) element.
+        set.last() → Retrieves the last (largest) element.
+        set.higher(value) → Retrieves the least element greater than the given element.
+        set.lower(value) → Retrieves the greatest element less than the given element.
+        set.isEmpty() → Checks if the set is empty.
+        set.size() → Returns the number of elements.
+
+9. Deque (ArrayDeque or LinkedList)
+
+    Initialization:
+    Deque<Type> deque = new ArrayDeque<>();
+    OR
+    Deque<Type> deque = new LinkedList<>();
+
+    Operations:
+        deque.addFirst(value) → Inserts the element at the front of the deque.
+        deque.addLast(value) → Inserts the element at the end.
+        deque.removeFirst() → Removes the first element.
+        deque.removeLast() → Removes the last element.
+        deque.getFirst() → Retrieves the first element.
+        deque.getLast() → Retrieves the last element.
+        deque.isEmpty() → Checks if the deque is empty.
+        deque.size() → Returns the number of elements.
+        deque.offerFirst(value) → Adds the element at the front (returns false if failed).
+        deque.offerLast(value) → Adds the element at the end (returns false if failed).
+
+10. BitSet
+
+    Initialization:
+    BitSet bitset = new BitSet(size);
+
+    Operations:
+        bitset.set(index) → Sets the bit at the specified index.
+        bitset.clear(index) → Clears the bit at the specified index.
+        bitset.get(index) → Checks if the bit at the index is set.
+        bitset.cardinality() → Returns the number of bits set to true.
+        bitset.or(anotherBitSet) → Performs a bitwise OR with another bitset.
+        bitset.and(anotherBitSet) → Performs a bitwise AND with another bitset.
+        bitset.xor(anotherBitSet) → Performs a bitwise XOR with another bitset.
+        bitset.flip(index) → Flips the bit at the specified index.
+
+11. StringBuilder
+
+    Initialization:
+    StringBuilder sb = new StringBuilder();
+
+    Operations:
+        sb.append(value) → Appends the string representation of the argument.
+        sb.insert(index, value) → Inserts the string at the specified index.
+        sb.delete(start, end) → Removes the characters from start to end-1.
+        sb.reverse() → Reverses the current sequence of characters.
+        sb.toString() → Converts the StringBuilder to a String.
+        sb.length() → Returns the length of the character sequence.
